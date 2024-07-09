@@ -88,6 +88,9 @@ castSpell(["air", "fire", "earth", "water"]);
 /* Task 11: The Nested Secret */
 const nestedSecret = { outer: { inner: "The Final Key" } };
 // TODO: Behind the final door lies a nested artifact containing the ultimate clue. Use nested destructuring to extract `The Final Key`. Print the unveiled secret.
+// const { outer: {inner} } = nestedSecret;
+const { inner } = nestedSecret.outer; // looks better I think.
+console.log(inner);
 
 /* Task 12: The Swap of Fate */
 let stoneA = "Emerald";
