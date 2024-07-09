@@ -27,8 +27,7 @@ const doorCode = {
   lower: "Omega",
 };
 // TODO: To open the Mysterious Door, a sequence is required, which might be incomplete. Use object destructuring to assign default values to ensure the door opens even if part of the code is missing. Make sure the `middle` defaults to one of the values from the `remaining` variable above if not provided. Print the door code sequence.
-const { third } = remaining;
-const { upper, middle = third, lower } = doorCode;
+const { upper, middle = Object.values(remaining)[0], lower } = doorCode;
 
 console.log(upper, middle, lower);
 
@@ -57,6 +56,12 @@ console.log(stone1, stone6);
 /* Task 7: The Array of Shadows */
 const shadows = ["Darkness", "Silence", "Whisper", "Echo"];
 // TODO: The Cave of Shadows hides more than it reveals. Use array destructuring with the rest parameter to separate the visible shadow (which is the first) from the hidden ones. Print the visible shadow and the hidden shadows.
+const [visibleShadow, ...hiddenShadows] = shadows;
+console.log(
+  `Visible shadow: ${visibleShadow}, Hidden shadows: ${hiddenShadows.join(
+    ", "
+  )}`
+);
 
 /* Task 8: The Wise Function */
 // TODO: Destructo needs to decode ancient directions to continue his quest. Help him by writing a function `revealPath` that decodes and prints the direction and distance to travel. The function takes an object with `direction` and `distance` as parameters.
