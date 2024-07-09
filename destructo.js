@@ -13,9 +13,13 @@ const locations = {
 };
 // TODO: The map reveals several locations, but only the first two are significant for the quest. Use object destructuring with the rest parameter to isolate the `first` and `second` locations from the `locations` object, capturing the rest in a variable called `remaining`. Print the key locations.
 const { first, second, ...remaining } = locations;
-console.log(`Locations 
+console.log(
+  `Locations 
 	1:${first}
-	2:${second}`);
+	2:${second},
+  `,
+  remaining
+);
 
 /* Task 3: The Mysterious Door */
 const doorCode = {
@@ -23,6 +27,10 @@ const doorCode = {
   lower: "Omega",
 };
 // TODO: To open the Mysterious Door, a sequence is required, which might be incomplete. Use object destructuring to assign default values to ensure the door opens even if part of the code is missing. Make sure the `middle` defaults to one of the values from the `remaining` variable above if not provided. Print the door code sequence.
+const { third } = remaining;
+const { upper, middle = third, lower } = doorCode;
+
+console.log(upper, middle, lower);
 
 /* Task 4: The Guardian's Riddle */
 const riddle = {
