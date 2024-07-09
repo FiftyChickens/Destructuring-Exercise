@@ -44,6 +44,8 @@ console.log(translation);
 /* Task 5: The Array of Elements */
 const elements = ["Fire", "Water", "Earth", "Air"];
 // TODO: Inside the library, Destructo discovers an array that represents the elements needed to decipher the next clue. Use array destructuring to extract the first two elements. Print the essential elements.
+const [element1, element2] = elements;
+console.log(`Essential elements ${element1}, ${element2}`);
 
 /* Task 6: Skipping Stones */
 const stones = [1, 2, 3, 4, 5, 6];
