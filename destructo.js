@@ -71,6 +71,10 @@ function revealPath(direction, distance) {
 
 /* Task 9: The Scroll of Defaults */
 // TODO: Destructo finds an ancient scroll with a potion recipe, but some ingredients are missing. Write a function `mixPotion` that uses defaults "Water" and "Fireflower" for `ingredient1` and `ingredient2` if they are not specified and print those mixings. The function takes an object with these optional properties.
+function mixPotion(ingredient1 = "Water", ingredient2 = "Fireflower") {
+  return console.log(`Mix potion with ${ingredient1} and ${ingredient2}`);
+}
+mixPotion();
 
 /* Task 10: The Array Spell */
 // TODO: At the gates of an ancient library, Destructo must cast a spell with the first two ingredients from a list given to him by a wise owl. Create a function `castSpell` that uses array destructuring to access these ingredients from an array and print the spell casting.
