@@ -65,6 +65,9 @@ console.log(
 
 /* Task 8: The Wise Function */
 // TODO: Destructo needs to decode ancient directions to continue his quest. Help him by writing a function `revealPath` that decodes and prints the direction and distance to travel. The function takes an object with `direction` and `distance` as parameters.
+function revealPath(direction, distance) {
+  return console.log(`Direction: ${direction}, Distance: ${distance}`);
+}
 
 /* Task 9: The Scroll of Defaults */
 // TODO: Destructo finds an ancient scroll with a potion recipe, but some ingredients are missing. Write a function `mixPotion` that uses defaults "Water" and "Fireflower" for `ingredient1` and `ingredient2` if they are not specified and print those mixings. The function takes an object with these optional properties.
